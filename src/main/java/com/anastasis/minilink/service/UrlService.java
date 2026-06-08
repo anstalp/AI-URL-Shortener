@@ -43,7 +43,6 @@ public class UrlService {
 
     public UrlMapping shortenUrl(String originalUrl, String customAlias){
 
-        //if (!StringUtils.hasText(customAlias)){
             UrlMapping url = new UrlMapping();
             url.setOriginalUrl(originalUrl);
 
@@ -57,18 +56,6 @@ public class UrlService {
 
             return urlRepository.save(url);
 
-//        }
-//      else { //περριτο αυτο(ο χρηστης δεν δινει ποτε customAlias)
-//            if (urlRepository.findByShortCode(customAlias).isPresent()){
-//                throw new RuntimeException("Alias already exist: " + customAlias);
-//            }
-//
-//            UrlMapping url = new UrlMapping();
-//            url.setOriginalUrl(originalUrl);
-//            url.setShortCode(customAlias);
-//
-//            return urlRepository.save(url);
-//        }
     }
 
     public UrlMapping getLink(String shortCode){
