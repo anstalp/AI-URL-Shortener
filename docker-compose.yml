@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  postgres-db:
+    image: postgres:15
+    container_name: minilink-postgres
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: minilink_user
+      POSTGRES_PASSWORD: 7708
+      POSTGRES_DB: minilink_db
